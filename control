@@ -1,7 +1,7 @@
-Package: com.wizages.notifylabel
-Name: notifylabel
-Depends: mobilesubstrate
-Version: 0.0.1
+Package: com.wizages.labelnotify
+Name: Label Notify
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, applist, firmware (>= 7.0), preferenceloader
+Version: 0.0.2
 Architecture: iphoneos-arm
 Description: An awesome MobileSubstrate tweak!
 Maintainer: wizages <wizagesmax@gmail.com>

@@ -1,0 +1,113 @@
+{
+   title = "LabelNotify";
+   items = (
+      {
+         cell = PSGroupCell;
+         label = "LabelNotify Settings";
+      },
+      {
+         cell = PSSwitchCell;
+         key = enabled;
+         label = Enabled;
+         default = 1;
+         defaults = "com.wizages.labelnotify";
+         PostNotification = "com.wizages.labelnotify/settingschanged";
+      },
+      {
+         cell = PSGroupCell;
+      },
+      {
+         detail = labelnotifyColorController;
+         cell = PSLinkListCell;
+         label = "Color Settings";
+      },
+      {
+         cell = PSGroupCell;
+      },
+      {
+         bundle = AppList;
+         cell = PSLinkCell;
+         ALSettingsPath = "/var/mobile/Library/Preferences/com.wizages.labelnotify.plist";
+         label = "Custom Label Settings";
+         isController = 1;
+         ALChangeNotification = "com.wizages.labelnotify/settingschanged";
+         ALAllowsSelection = 1;
+         ALSettingsDefaultValue = "";
+         ALSectionDescriptors = (
+         		{
+               		action = "showPreferences";
+               		"cell-class-name" = "ALDisclosureIndicatedCell";
+               		"display-identifier-macro" = "@@DISPLAYIDENTIFIER@@";
+               		"suppress-hidden-apps" = 1;
+               		predicate = "isSystemApplication = FALSE";
+               		"icon-size" = 29;
+               		entry = {
+               			PostNotification = "com.wizages.labelnotify/settingschanged";
+                        cell = PSLinkCell;
+                        defaults = "com.wizages.labelnotify";
+                        detail = PSListItemsController;
+                        key = "Label-@@DISPLAYIDENTIFIER@@";
+                        items = (
+                           {
+                              cell = PSEditTextCell;
+                              default = "Badge";
+                              defaults = "com.wizages.labelnotify";
+                              key = "Label-@@DISPLAYIDENTIFIER@@";
+                              placeholder = "Badge";
+                              PostNotification = "com.wizages.labelnotify/settingschanged";
+                              autoCaps = "words";
+                           }
+                           );
+                        isController = 1;
+                        overridePrincipalClass = 1;
+               		};
+               },
+            	{
+               		action = "showPreferences";
+               		"cell-class-name" = "ALDisclosureIndicatedCell";
+               		"display-identifier-macro" = "@@DISPLAYIDENTIFIER@@";
+               		"suppress-hidden-apps" = 1;
+               		predicate = "isSystemApplication = TRUE";
+               		"icon-size" = 29;
+               		entry = {
+                        PostNotification = "com.wizages.labelnotify/settingschanged";
+                        cell = PSLinkCell;
+                        defaults = "com.wizages.labelnotify";
+                        detail = PSListItemsController;
+                        key = "Label-@@DISPLAYIDENTIFIER@@";
+                        items = (
+                           {
+                              cell = PSEditTextCell;
+                              default = "Badge";
+                              defaults = "com.wizages.labelnotify";
+                              key = "Label-@@DISPLAYIDENTIFIER@@";
+                              placeholder = "Badge";
+                              PostNotification = "com.wizages.labelnotify/settingschanged";
+                              autoCaps = "words";
+                           }
+                           );
+                        isController = 1;
+                        overridePrincipalClass = 1;
+                     };
+            	}
+      		);
+      },
+      {
+         cell = PSGroupCell;
+      },
+      {
+         detail = labelnotifyMiscController;
+         cell = PSLinkListCell;
+         label = "Miscellaneous Settings";
+      },
+      {
+         cell = PSGroupCell;
+         label = "";
+      },
+      {
+         action = "respring";
+         cell = PSButtonCell;
+         label = "Respring to apply changes";
+      }
+   );
+}

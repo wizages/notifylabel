@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Color Settings</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.wizages.labelnotify</string>
+			<key>key</key>
+			<string>enabled_fill</string>
+			<key>label</key>
+			<string>Enable fill color</string>
+			<key>PostNotification</key>
+			<string>com.wizages.labelnotify/settingschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>Fill Color</string>
+			<key>cellClass</key>
+			<string>PFSimpleLiteColorCell</string>
+			<key>libcolorpicker</key>
+			<dict>
+				<key>defaults</key>
+				<string>com.wizages.labelnotify</string>
+				<key>key</key>
+				<string>fillColor</string>
+				<key>fallback</key>
+				<string>#8b8b8b</string>
+				<key>PostNotification</key>
+				<string>com.wizages.labelnotify/settingschanged</string>
+				<key>alpha</key>
+				<false/>
+			</dict>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.wizages.labelnotify</string>
+			<key>key</key>
+			<string>enabled_text</string>
+			<key>label</key>
+			<string>Enable text color</string>
+			<key>PostNotification</key>
+			<string>com.wizages.labelnotify/settingschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>Text Color</string>
+			<key>cellClass</key>
+			<string>PFSimpleLiteColorCell</string>
+			<key>libcolorpicker</key>
+			<dict>
+				<key>defaults</key>
+				<string>com.wizages.labelnotify</string>
+				<key>key</key>
+				<string>textColor</string>
+				<key>fallback</key>
+				<string>#ffffff</string>
+				<key>PostNotification</key>
+				<string>com.wizages.labelnotify/settingschanged</string>
+				<key>alpha</key>
+				<false/>
+			</dict>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Color Settings</string>
+</dict>
+</plist>
