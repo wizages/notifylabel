@@ -3,7 +3,6 @@
 #import <Preferences/PSSpecifier.h>
 #import <Preferences/PSListController.h>
 #include "Generic.h"
-#import <libcolorpicker.h>
 
 @interface labelnotifyMiscController : PSListController
 
@@ -22,6 +21,10 @@
 -(void)loadView {
 	[super loadView];
 }
-
+-(void)_returnKeyPressed:(id)arg1 {
+        [super _returnKeyPressed:arg1];
+ 
+        [self.view endEditing:YES];
+}
 
 @end

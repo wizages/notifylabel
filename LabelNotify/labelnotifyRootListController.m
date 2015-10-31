@@ -47,7 +47,7 @@
 {
     SLComposeViewController *composeController = [SLComposeViewController
                                                   composeViewControllerForServiceType:SLServiceTypeTwitter];
-    [composeController setInitialText:@"I mustache you a question, why you not using #CleanSheets by @Wizages because dirty was so yesterday."];
+    [composeController setInitialText:@"Why have badges when you can have fancy labels #LabelNotify by @wizages"];
     
     [self presentViewController:composeController animated:YES completion:nil];
 }
@@ -60,6 +60,7 @@
 -(void)setupHeader {
     UIView *header = nil;
     header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 100)];
+    HBLogDebug(@"%f", self.view.bounds.size.width);
     UIImage *headerImage;
     if (kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_8_0) {
         headerImage = [UIImage imageNamed:@"Icons/Banner.png" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
@@ -68,8 +69,9 @@
         headerImage = [UIImage imageNamed:@"Icons/Banner.png" inBundle:[NSBundle bundleForClass:self.class]];
     }
     UIImageView *imageView = [[UIImageView alloc] initWithImage:headerImage];
-    header.frame = (CGRect){ header.frame.origin, headerImage.size };
-    imageView.frame = CGRectMake(imageView.frame.origin.x, 10, imageView.frame.size.width, headerImage.size.height);    
+    //header.frame = (CGRect){ header.frame.origin, headerImage.size };
+    imageView.frame = CGRectMake(header.frame.origin.x, 10, self.view.bounds.size.width, 100);
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
     [header addSubview:imageView];
     [self.table setTableHeaderView:header];
 }
@@ -101,6 +103,10 @@
 {
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
     [self setupHeader];
+}
+
+-(void)emailDev {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:wizagesmax@gmail.com?subject=LabelNotify%20Support"]];
 }
 
 @end

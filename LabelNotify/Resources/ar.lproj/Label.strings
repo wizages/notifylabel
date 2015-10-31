@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Section Title. -->
+	<key>CUSTOM_LABEL_HEADER</key>
+	<string>إعدادات خط مخصص</string>
+
+	<!-- Default value for notications (should be the same as default value in Misc)-->
+	<key>DEFAULT_VALUE</key>
+	<string>الإشعار</string>
+
+	<!-- Section Title. -->
+	<key>CUSTOM_COLOR_HEADER</key>
+	<string>إعدادات لون مخصص</string>
+
+	<!-- Switch to enable or disable text color -->
+	<key>CUSTOM_FILL_SWITCH_LABEL</key>
+	<string>تفعيل لون خط مخصص</string>
+
+	<!-- Label for the text color chooser -->
+	<key>FILL_COLOR_LABEL</key>
+	<string>لون الإشباع</string>
+
+	<!-- Switch to enable or disable text color -->
+	<key>CUSTOM_TEXT_SWITCH_LABEL</key>
+	<string>تفعيل لون خط مخصص</string>
+
+	<!-- Label for the text color chooser -->
+	<key>TEXT_COLOR_LABEL</key>
+	<string>لون الخط</string>
+</dict>
+</plist>

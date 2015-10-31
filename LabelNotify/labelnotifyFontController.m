@@ -2,7 +2,6 @@
 #import <Social/SLServiceTypes.h>
 #import <Preferences/PSSpecifier.h>
 #import <Preferences/PSListController.h>
-#import <AppList/AppList.h>
 #include "Generic.h"
 
 @interface labelnotifyLabelController : PSListController

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//DE" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Main Title and Section Title (miscellaneous is abbreviated because it is too long.)-->
+	<key>MISC_TITLE</key>
+	<string>Sonstige Einstellungen</string>
+
+	<!-- Default notifications badge name -->
+	<key>DEFAULT_VALUE</key>
+	<string>Kennzeichensymbol</string>
+
+	<!-- Default notfications label -->
+	<key>DEFAULT_LABEL</key>
+	<string>Standard Beschriftung</string>
+
+	<!-- Label for a switch that disables badges -->
+	<key>BADGE_SWITCH_LABEL</key>
+	<string>Aktiviere Kennzeichensymbol</string>
+
+	<!-- Label for a switch that disables app names -->
+	<key>APPNAME_SWITCH_LABEL</key>
+	<string>Verstecke App Namen</string>
+
+	<!-- Label for a switch that disables pluralization of strings. This means we make it more than one. -->
+	<key>PLURAL_SWITCH_LABEL</key>
+	<string>Pluralisierung der Texte</string>
+
+	<!-- Plural string means what is the generic pluralizer for your language. If this is not available put in N/A-->
+	<key>PLURAL_GROUP_LABEL</key>
+	<string>N/A</string>
+
+	<!-- Generic way to make a string plural. If this is not available put in N/A-->
+	<key>PLURAL</key>
+	<string>N/A</string>
+</dict>
+</plist>

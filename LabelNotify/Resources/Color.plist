@@ -8,7 +8,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Color Settings</string>
+			<string>COLORS</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -20,7 +20,7 @@
 			<key>key</key>
 			<string>enabled_fill</string>
 			<key>label</key>
-			<string>Enable fill color</string>
+			<string>FILL_SWITCH_LABEL</string>
 			<key>PostNotification</key>
 			<string>com.wizages.labelnotify/settingschanged</string>
 		</dict>
@@ -28,7 +28,7 @@
 			<key>cell</key>
 			<string>PSLinkCell</string>
 			<key>label</key>
-			<string>Fill Color</string>
+			<string>FILL_COLOR_LABEL</string>
 			<key>cellClass</key>
 			<string>PFSimpleLiteColorCell</string>
 			<key>libcolorpicker</key>
@@ -61,7 +61,7 @@
 			<key>key</key>
 			<string>enabled_text</string>
 			<key>label</key>
-			<string>Enable text color</string>
+			<string>TEXT_SWITCH_LABEL</string>
 			<key>PostNotification</key>
 			<string>com.wizages.labelnotify/settingschanged</string>
 		</dict>
@@ -69,7 +69,7 @@
 			<key>cell</key>
 			<string>PSLinkCell</string>
 			<key>label</key>
-			<string>Text Color</string>
+			<string>TEXT_COLOR_LABEL</string>
 			<key>cellClass</key>
 			<string>PFSimpleLiteColorCell</string>
 			<key>libcolorpicker</key>
@@ -88,6 +88,6 @@
 		</dict>
 	</array>
 	<key>title</key>
-	<string>Color Settings</string>
+	<string>COLORS</string>
 </dict>
 </plist>

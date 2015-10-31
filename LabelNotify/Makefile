@@ -2,11 +2,12 @@ ARCHS = armv7 arm64
 include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = LabelNotify
-LabelNotify_FILES = labelnotifyRootListController.m labelnotifyColorController.m labelnotifyMiscController.m
+LabelNotify_FILES = labelnotifyRootListController.m labelnotifyColorController.m labelnotifyMiscController.m labelnotifyMakersController.m SKPersonCell.m labelnotifyLabelController.m
 LabelNotify_INSTALL_PATH = /Library/PreferenceBundles
 LabelNotify_FRAMEWORKS = UIKit Social
 LabelNotify_PRIVATE_FRAMEWORKS = Preferences
 LabelNotify_LIBRARIES = applist colorpicker
+LabelNotify_LDFLAGS += -Wl,-segalign,4000
 
 include $(THEOS_MAKE_PATH)/bundle.mk
 

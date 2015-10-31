@@ -1,7 +1,18 @@
 #define TweakPreferencePath @"/User/Library/Preferences/com.wizages.labelnotify.plist"
+#define LabelStuff @"/Library/PreferenceBundles/LabelNotify.bundle/Label.plist"
+#define LabelStuffCustom @"/Library/PreferenceBundles/LabelNotify.bundle/Label-custom.plist"
+#define LCL(str) [self localizedString:str]
 
-@interface PSListController (rotation)
+@interface PSListController (fixes)
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation;
+-(id)bundle;
+@end
+
+@interface PSSpecifier (getKey)
+@property (nonatomic, retain) NSDictionary *titleDictionary;
+-(id)propertyForKey:(NSString*)key;
+-(id)setProperty:(id)arg1 forKey:(id)arg2;
+- (void)setTitleDictionary:(NSDictionary *)arg1;
 @end
 
 @interface UIImage (ios7)
@@ -58,6 +69,16 @@
 -(void) setPreferenceValue:(id)value specifier:(PSSpecifier*)specifier {
     NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
     [defaults addEntriesFromDictionary:[NSDictionary dictionaryWithContentsOfFile:TweakPreferencePath]];
+    HBLogDebug(@"MEH");
+    if ([specifier.properties[@"key"] isEqualToString:@"customFill"])
+    {
+        HBLogDebug(@"HIT ME BABY");
+    }
+    if (specifier.properties[@"key"] == nil)
+    {
+        HBLogDebug(@"Error : Key is nil show specifier ");
+        HBLogDebug(@"%@", specifier);
+    }
     [defaults setObject:value forKey:specifier.properties[@"key"]];
     [defaults writeToFile:TweakPreferencePath atomically:YES];
     CFStringRef toPost = (CFStringRef)specifier.properties[@"PostNotification"];

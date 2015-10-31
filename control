@@ -1,9 +1,9 @@
 Package: com.wizages.labelnotify
 Name: Label Notify
 Depends: mobilesubstrate, org.thebigboss.libcolorpicker, applist, firmware (>= 7.0), preferenceloader
-Version: 0.0.2
+Version: 1.1.1
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
+Description: Label notify has the ability to replace your icon label with the number of notifications that are pending for that application. You will be able to change the labels text color and fill color if it has a notification. Also you have the ability to add custom labels for the notifications, the ability to hide all the labels that don't have notifications and even the ability to pluralize the custom label.
 Maintainer: wizages <wizagesmax@gmail.com>
 Author: wizages <wizagesmax@gmail.com>
 Section: Tweaks

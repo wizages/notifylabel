@@ -3,12 +3,12 @@
    items = (
       {
          cell = PSGroupCell;
-         label = "LabelNotify Settings";
+         label = TITLE;
       },
       {
          cell = PSSwitchCell;
          key = enabled;
-         label = Enabled;
+         label = ENABLE_LABEL;
          default = 1;
          defaults = "com.wizages.labelnotify";
          PostNotification = "com.wizages.labelnotify/settingschanged";
@@ -19,7 +19,7 @@
       {
          detail = labelnotifyColorController;
          cell = PSLinkListCell;
-         label = "Color Settings";
+         label = COLORS;
       },
       {
          cell = PSGroupCell;
@@ -28,13 +28,14 @@
          bundle = AppList;
          cell = PSLinkCell;
          ALSettingsPath = "/var/mobile/Library/Preferences/com.wizages.labelnotify.plist";
-         label = "Custom Label Settings";
+         label = APP_SETTINGS;
          isController = 1;
          ALChangeNotification = "com.wizages.labelnotify/settingschanged";
          ALAllowsSelection = 1;
          ALSettingsDefaultValue = "";
          ALSectionDescriptors = (
          		{
+                     bundle = AppList;
                		action = "showPreferences";
                		"cell-class-name" = "ALDisclosureIndicatedCell";
                		"display-identifier-macro" = "@@DISPLAYIDENTIFIER@@";
@@ -45,49 +46,30 @@
                			PostNotification = "com.wizages.labelnotify/settingschanged";
                         cell = PSLinkCell;
                         defaults = "com.wizages.labelnotify";
-                        detail = PSListItemsController;
-                        key = "Label-@@DISPLAYIDENTIFIER@@";
-                        items = (
-                           {
-                              cell = PSEditTextCell;
-                              default = "Badge";
-                              defaults = "com.wizages.labelnotify";
-                              key = "Label-@@DISPLAYIDENTIFIER@@";
-                              placeholder = "Badge";
-                              PostNotification = "com.wizages.labelnotify/settingschanged";
-                              autoCaps = "words";
-                           }
-                           );
+                        detail = labelnotifyLabelController;
+                        label = "@@DISPLAYIDENTIFIER@@";
                         isController = 1;
                         overridePrincipalClass = 1;
+                        bundle = AppList;
                		};
                },
             	{
-               		action = "showPreferences";
-               		"cell-class-name" = "ALDisclosureIndicatedCell";
-               		"display-identifier-macro" = "@@DISPLAYIDENTIFIER@@";
-               		"suppress-hidden-apps" = 1;
-               		predicate = "isSystemApplication = TRUE";
-               		"icon-size" = 29;
-               		entry = {
+               		bundle = AppList;
+                     action = "showPreferences";
+                     "cell-class-name" = "ALDisclosureIndicatedCell";
+                     "display-identifier-macro" = "@@DISPLAYIDENTIFIER@@";
+                     "suppress-hidden-apps" = 1;
+                     predicate = "isSystemApplication = TRUE";
+                     "icon-size" = 29;
+                     entry = {
                         PostNotification = "com.wizages.labelnotify/settingschanged";
                         cell = PSLinkCell;
                         defaults = "com.wizages.labelnotify";
-                        detail = PSListItemsController;
-                        key = "Label-@@DISPLAYIDENTIFIER@@";
-                        items = (
-                           {
-                              cell = PSEditTextCell;
-                              default = "Badge";
-                              defaults = "com.wizages.labelnotify";
-                              key = "Label-@@DISPLAYIDENTIFIER@@";
-                              placeholder = "Badge";
-                              PostNotification = "com.wizages.labelnotify/settingschanged";
-                              autoCaps = "words";
-                           }
-                           );
+                        detail = labelnotifyLabelController;
+                        label = "@@DISPLAYIDENTIFIER@@";
                         isController = 1;
                         overridePrincipalClass = 1;
+                        bundle = AppList;
                      };
             	}
       		);
@@ -98,7 +80,7 @@
       {
          detail = labelnotifyMiscController;
          cell = PSLinkListCell;
-         label = "Miscellaneous Settings";
+         label = MISC_TITLE;
       },
       {
          cell = PSGroupCell;
@@ -107,7 +89,26 @@
       {
          action = "respring";
          cell = PSButtonCell;
-         label = "Respring to apply changes";
+         label = RESPRING_BUTTON;
+      },
+      {
+         cell = PSGroupCell;
+         label = "";
+      },
+      {
+         detail = labelnotifyMakersController;
+         cell = PSLinkListCell;
+         label = MAKERS;
+      },
+      {
+         cell = PSGroupCell;
+         label = "";
+         footerText = "© 2015 Wizages";
+      },
+      {
+         action = "emailDev";
+         cell = PSLinkCell;
+         label = SUPPORT;
       }
    );
 }

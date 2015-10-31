@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Section Title. -->
+	<key>TITLE</key>
+	<string>Ajustes de LabelNotify</string>
+
+	<!-- Switch to enable or disable the tweak -->
+	<key>ENABLE_LABEL</key>
+	<string>Habilitar</string>
+
+	<!-- Label for the color settings page -->
+	<key>COLORS</key>
+	<string>Opciones de Color</string>
+
+	<!-- Label for the app settings page. -->
+	<key>APP_SETTINGS</key>
+	<string>Opciones por App</string>
+
+	<!-- Label for the Miscellaneous Settings page. -->
+	<key>MISC_TITLE</key>
+	<string>Otras Opciones</string>
+
+	<!-- Respring button label -->
+	<key>RESPRING_BUTTON</key>
+	<string>Respring para Aplicar Cambios</string>
+
+	<!-- Label for the Makers Settings page. -->
+	<key>MAKERS</key>
+	<string>Creadores</string>
+
+	<!-- Label for the Support Settings page. -->
+	<key>SUPPORT</key>
+	<string>Soporte</string>
+
+	<!-- Tweet that is sent when you press the heart. -->
+	<key>TWEET_STRING</key>
+	<string>Estoy usando #LabelNotify echo por @wizages para personificar mi iPhone!</string>
+
+	<!-- Question to ask if a person wants to respring -->
+	<key>RESPRING_QUESTION</key>
+	<string>Estas seguro que quieres respring?</string>
+
+	<!-- Yes (confirm button) -->
+	<key>YES</key>
+	<string>Si</string>
+
+	<!-- No (cancel button) -->
+	<key>NO</key>
+	<string>No</string>
+</dict>
+</plist>

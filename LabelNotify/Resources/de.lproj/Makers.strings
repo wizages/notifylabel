@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//DE" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Main Title (Should be the same as the one in Root)-->
+	<key>MAKERS</key>
+	<string>Entwickler</string>
+
+	<!-- Developer label -->
+	<key>DEVELOPER</key>
+	<string>Entwickler</string>
+
+	<!-- Concept Artist and Logo Maker label -->
+	<key>CONCEPTARTIST</key>
+	<string>Konzeptkünstler & Logo Designer</string>
+
+</dict>
+</plist>

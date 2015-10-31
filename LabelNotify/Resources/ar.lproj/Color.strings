@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Section Title and Main Title -->
+	<key>COLORS</key>
+	<string>إعدادات الألوان</string>
+
+	<!-- Switch to enable or disable fill color -->
+	<key>FILL_SWITCH_LABEL</key>
+	<string>تفعيل إشباع اللون</string>
+
+	<!-- Label for the fill color chooser -->
+	<key>FILL_COLOR_LABEL</key>
+	<string>إشباع اللون</string>
+
+	<!-- Switch to enable or disable text color -->
+	<key>TEXT_SWITCH_LABEL</key>
+	<string>تفعيل لون الخط</string>
+
+	<!-- Label for the text color chooser -->
+	<key>TEXT_COLOR_LABEL</key>
+	<string>لون الخط</string>
+</dict>
+</plist>
