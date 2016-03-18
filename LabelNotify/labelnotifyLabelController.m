@@ -52,7 +52,12 @@ NSString *AppID;
 	*/
 	if (!_specifiers) {
 		_specifiers = [[self loadSpecifiersFromPlistName:@"Label" target:self] retain];
+        for (PSSpecifier *specifier in _specifiers) {
+            specifier.properties[@"key"] = [NSString stringWithFormat:@"%@-%@", specifier.properties[@"key"], self.AppID];
+        }
 	}
+    
+    
 	//HBLogDebug(@"%@",[[_specifiers objectAtIndex:8] class]);
 	return _specifiers;
 	/*
@@ -157,11 +162,6 @@ NSString *AppID;
 	
     [self.table setTableHeaderView:header];
 }
-/*
-- (id)navigationTitle {
-	return [[self bundle] localizedStringForKey:[super label] value:[super label] table:nil];
-}
-*/
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
@@ -174,36 +174,13 @@ NSString *AppID;
 	HBLogDebug(@"%@", self.AppID);
 }
 
--(id) readPreferenceValue:(PSSpecifier*)specifier {
-	HBLogDebug(@"%@-%@", self.AppID, specifier.properties[@"key"]);
-    NSDictionary *TweakSettings = [NSDictionary dictionaryWithContentsOfFile:TweakPreferencePath];
-    NSString *appendName = [NSString stringWithFormat:@"%@-%@", specifier.properties[@"key"], self.AppID];
-    if (!TweakSettings[appendName]) {
-        return specifier.properties[@"default"];
-    }
-    return TweakSettings[appendName];
-}
- 
--(void) setPreferenceValue:(id)value specifier:(PSSpecifier*)specifier {
-	HBLogDebug(@"MEH");
-    NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
-    [defaults addEntriesFromDictionary:[NSDictionary dictionaryWithContentsOfFile:TweakPreferencePath]];
-    if (specifier.properties[@"key"] == nil)
-    {
-        HBLogDebug(@"Error : Key is nil show specifier ");
-        HBLogDebug(@"%@", specifier);
-    }
-    HBLogDebug(@"%@-%@", self.AppID,specifier.properties[@"key"]);
-    [defaults setObject:value forKey:[NSString stringWithFormat:@"%@-%@", specifier.properties[@"key"], self.AppID]];
-    [defaults writeToFile:TweakPreferencePath atomically:YES];
-    CFStringRef toPost = (CFStringRef)specifier.properties[@"PostNotification"];
-    if(toPost) CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), toPost, NULL, NULL, YES);
-    [self setupHeader];
-}
 -(void)_returnKeyPressed:(id)arg1 {
-     [super _returnKeyPressed:arg1];
- 
-     [self.view endEditing:YES];
+     //[super _returnKeyPressed:arg1];
+    [self.view endEditing:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [self setupHeader];
+    });
+    
 }
 
 -(void) generateColors{

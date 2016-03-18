@@ -22,7 +22,7 @@
 	[super loadView];
 }
 -(void)_returnKeyPressed:(id)arg1 {
-        [super _returnKeyPressed:arg1];
+        //[super _returnKeyPressed:arg1];
  
         [self.view endEditing:YES];
 }

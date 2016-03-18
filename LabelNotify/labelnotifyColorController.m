@@ -4,6 +4,7 @@
 #import <Preferences/PSListController.h>
 #include "Generic.h"
 #import <libcolorpicker.h>
+#import "HBColorPickerCell.h"
 
 @interface labelnotifyColorController : PSListController
 

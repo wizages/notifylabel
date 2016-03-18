@@ -11,7 +11,7 @@
          label = ENABLE_LABEL;
          default = 1;
          defaults = "com.wizages.labelnotify";
-         PostNotification = "com.wizages.labelnotify/settingschanged";
+         PostNotification = "com.wizages.labelnotify/ReloadPrefs";
       },
       {
          cell = PSGroupCell;
@@ -30,7 +30,7 @@
          ALSettingsPath = "/var/mobile/Library/Preferences/com.wizages.labelnotify.plist";
          label = APP_SETTINGS;
          isController = 1;
-         ALChangeNotification = "com.wizages.labelnotify/settingschanged";
+         ALChangeNotification = "com.wizages.labelnotify/ReloadPrefs";
          ALAllowsSelection = 1;
          ALSettingsDefaultValue = "";
          ALSectionDescriptors = (
@@ -43,7 +43,7 @@
                		predicate = "isSystemApplication = FALSE";
                		"icon-size" = 29;
                		entry = {
-               			PostNotification = "com.wizages.labelnotify/settingschanged";
+               			PostNotification = "com.wizages.labelnotify/ReloadPrefs";
                         cell = PSLinkCell;
                         defaults = "com.wizages.labelnotify";
                         detail = labelnotifyLabelController;
@@ -62,7 +62,7 @@
                      predicate = "isSystemApplication = TRUE";
                      "icon-size" = 29;
                      entry = {
-                        PostNotification = "com.wizages.labelnotify/settingschanged";
+                        PostNotification = "com.wizages.labelnotify/ReloadPrefs";
                         cell = PSLinkCell;
                         defaults = "com.wizages.labelnotify";
                         detail = labelnotifyLabelController;

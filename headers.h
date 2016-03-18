@@ -3,15 +3,8 @@ NSDictionary *ColorSettings;
 
 NSString *numberNotify;
 NSString *bundleID;
-BOOL enabled = true;
-BOOL enabledText = true;
-BOOL enabledFill = true;
-BOOL enabledBadges = false;
-BOOL enabledPlural = true;
-BOOL hideLabels = false;
 NSString *colorTextString;
 NSString *colorFillString;
-NSString *defaultLabel;
 id newView;
 
 @interface SBIcon : NSObject

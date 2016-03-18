@@ -20,7 +20,7 @@
 			<key>placeholder</key>
 			<string>DEFAULT_VALUE</string>
 			<key>PostNotification</key>
-			<string>com.wizages.labelnotify/settingschanged</string>
+			<string>com.wizages.labelnotify/ReloadPrefs</string>
 			<key>defaults</key>
 			<string>com.wizages.labelnotify</string>
 			<key>key</key>

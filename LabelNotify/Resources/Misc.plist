@@ -18,7 +18,7 @@
 			<key>placeholder</key>
 			<string>DEFAULT_VALUE</string>
 			<key>PostNotification</key>
-			<string>com.wizages.labelnotify/settingschanged</string>
+			<string>com.wizages.labelnotify/ReloadPrefs</string>
 			<key>defaults</key>
 			<string>com.wizages.labelnotify</string>
 			<key>key</key>
@@ -42,7 +42,7 @@
 			<key>label</key>
 			<string>BADGE_SWITCH_LABEL</string>
 			<key>PostNotification</key>
-			<string>com.wizages.labelnotify/settingschanged</string>
+			<string>com.wizages.labelnotify/ReloadPrefs</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -56,7 +56,7 @@
 			<key>label</key>
 			<string>APPNAME_SWITCH_LABEL</string>
 			<key>PostNotification</key>
-			<string>com.wizages.labelnotify/settingschanged</string>
+			<string>com.wizages.labelnotify/ReloadPrefs</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -70,7 +70,7 @@
 			<key>label</key>
 			<string>PLURAL_SWITCH_LABEL</string>
 			<key>PostNotification</key>
-			<string>com.wizages.labelnotify/settingschanged</string>
+			<string>com.wizages.labelnotify/ReloadPrefs</string>
 		</dict>
 	</array>
 	<key>title</key>

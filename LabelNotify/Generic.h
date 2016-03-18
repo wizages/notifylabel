@@ -55,34 +55,3 @@
 }
 
 @end
-
-@implementation PSListController (Fix)
-
--(id) readPreferenceValue:(PSSpecifier*)specifier {
-    NSDictionary *TweakSettings = [NSDictionary dictionaryWithContentsOfFile:TweakPreferencePath];
-    if (!TweakSettings[specifier.properties[@"key"]]) {
-        return specifier.properties[@"default"];
-    }
-    return TweakSettings[specifier.properties[@"key"]];
-}
- 
--(void) setPreferenceValue:(id)value specifier:(PSSpecifier*)specifier {
-    NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
-    [defaults addEntriesFromDictionary:[NSDictionary dictionaryWithContentsOfFile:TweakPreferencePath]];
-    HBLogDebug(@"MEH");
-    if ([specifier.properties[@"key"] isEqualToString:@"customFill"])
-    {
-        HBLogDebug(@"HIT ME BABY");
-    }
-    if (specifier.properties[@"key"] == nil)
-    {
-        HBLogDebug(@"Error : Key is nil show specifier ");
-        HBLogDebug(@"%@", specifier);
-    }
-    [defaults setObject:value forKey:specifier.properties[@"key"]];
-    [defaults writeToFile:TweakPreferencePath atomically:YES];
-    CFStringRef toPost = (CFStringRef)specifier.properties[@"PostNotification"];
-    if(toPost) CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), toPost, NULL, NULL, YES);
-}
-
-@end
